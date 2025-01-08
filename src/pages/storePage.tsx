@@ -1,13 +1,18 @@
 import React from 'react';
-import './styles/StorePage.css';
+import Header from '../components/header';
+import HeroSection from '../components/heroSection';
+import StoreList from '../components/storeList';
+// import Footer from '../components/Footer';
 
-const StorePage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <div className="store-page">
-      <h1>가게 상세 정보</h1>
-      <p>이 페이지에서 가게 정보를 확인하고 예약할 수 있습니다.</p>
+    <div className="min-h-screen bg-amber-50">
+      <Header />
+      <HeroSection />
+      <StoreList />
+      {/* <Footer /> */}
     </div>
   );
 };
 
-export default StorePage;
+export default HomePage;

@@ -1,19 +1,18 @@
 import React from 'react';
+import Header from '../components/header';
+import HeroSection from '../components/heroSection';
 import StoreList from '../components/storeList';
-import '../styles/homePage.css';
+// import Footer from '../components/footer';
 
-const homePage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <div className="homePage">
-      <header className="header">
-        <h1>DangSalon - 애견 미용 예약 서비스</h1>
-      </header>
-      <main>
-        <h2>가게 목록</h2>
-        <StoreList />
-      </main>
+    <div className="min-h-screen bg-amber-50">
+      <Header />
+      <HeroSection />
+      <StoreList />
+      {/* <Footer /> */}
     </div>
   );
 };
 
-export default homePage;
+export default HomePage;
