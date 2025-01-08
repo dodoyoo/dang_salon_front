@@ -1,0 +1,36 @@
+.storeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.storeCard {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.storeCard:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.detailsLink {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.detailsLink:hover {
+  text-decoration: underline;
+}
