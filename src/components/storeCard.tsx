@@ -22,10 +22,17 @@ const StoreCard: React.FC<StoreCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all">
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative">
-        <img src={imageUrl} alt={name} className="w-full h-56 object-cover" />
-        <button className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-amber-50">
+        <img
+          src={imageUrl || '/api/placeholder/400/300'}
+          alt={name}
+          className="w-full h-56 object-cover"
+        />
+        <button
+          className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-amber-50 transition-colors"
+          aria-label="찜하기"
+        >
           <Heart className="w-5 h-5 text-amber-800" />
         </button>
       </div>
@@ -37,19 +44,19 @@ const StoreCard: React.FC<StoreCardProps> = ({
           >
             {name}
           </Link>
-          <div className="flex items-center">
-            <Star className="w-5 h-5 text-yellow-400 mr-1" />
-            <span className="text-amber-900">{rating}</span>
+          <div className="flex items-center bg-amber-50 px-2 py-1 rounded-full">
+            <Star className="w-5 h-5 text-yellow-500 mr-1" />
+            <span className="text-amber-900 font-medium">{rating}</span>
           </div>
         </div>
         <div className="space-y-2 text-amber-800">
           <div className="flex items-center">
-            <MapPin className="w-4 h-4 mr-2" />
-            <span>{address}</span>
+            <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+            <span className="text-sm">{address}</span>
           </div>
           <div className="flex items-center">
-            <Clock className="w-4 h-4 mr-2" />
-            <span>{hours}</span>
+            <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
+            <span className="text-sm">{hours}</span>
           </div>
         </div>
         <div className="mt-4 pt-4 border-t border-amber-100">
