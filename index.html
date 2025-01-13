@@ -1,13 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DangSalon - 애견 미용 예약 서비스</title>
+    <title>댕살롱 - 애견미용 예약 서비스</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .header {
+        background-color: #ff6b6b;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        color: white;
+        font-size: 24px;
+      }
+
+      .search-section {
+        padding: 2rem;
+        background-color: #f8f9fa;
+      }
+
+      .search-bar {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .search-bar input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .search-bar button {
+        padding: 0.8rem 1.5rem;
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .shop-list {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .shop-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .shop-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .shop-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .shop-info {
+        color: #666;
+        font-size: 14px;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .shop-rating {
+        color: #ff6b6b;
+        font-weight: bold;
+      }
+
+      .footer {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <h1>댕살롱</h1>
+    </header>
+
+    <section class="search-section">
+      <div class="search-bar">
+        <input type="text" placeholder="원하시는 애견미용실을 검색해보세요" />
+        <button>검색</button>
+      </div>
+    </section>
+
+    <main class="shop-list">
+      <div class="shop-card">
+        <div class="shop-name">멍멍이 살롱</div>
+        <div class="shop-info">
+          <span class="shop-rating">⭐ 4.8</span>
+          <span>영업시간: 10:00 - 20:00</span>
+          <span>휴게시간: 13:00 - 14:00</span>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-name">프리미엄 펫 살롱</div>
+        <div class="shop-info">
+          <span class="shop-rating">⭐ 4.9</span>
+          <span>영업시간: 09:00 - 19:00</span>
+          <span>휴게시간: 12:00 - 13:00</span>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-name">럭셔리 댕댕 살롱</div>
+        <div class="shop-info">
+          <span class="shop-rating">⭐ 4.7</span>
+          <span>영업시간: 11:00 - 21:00</span>
+          <span>휴게시간: 14:00 - 15:00</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>댕살롱 &copy; 2025</p>
+    </footer>
   </body>
 </html>
